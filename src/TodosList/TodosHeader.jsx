@@ -27,14 +27,14 @@ const TodoHeaders = ({headers, onClickHandler}) => {
     onClickHandler(ev);
   }
 
-  return <>
+  return <tr>
     { 
       headers.map((unTrimmedHeader, idx) => {
         const header = unTrimmedHeader.trim();
         return <th onClick={handleClick} data-header-name={header} className={`th--${header} theader`} key={idx}>{header}</th>
       })
     } 
-  </>
+  </tr>
 };
 
 export default TodoHeaders;

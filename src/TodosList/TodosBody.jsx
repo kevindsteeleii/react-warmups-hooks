@@ -2,9 +2,9 @@ import React from "react";
 
 const TodosBody = ({ todos }) => {
 
-  return <>
+  return (<tbody>
     { todos.map((todo, todoKey) => <tr key={todoKey}> <TodosRow todoObj={todo}/></tr>) }
-  </>
+  </tbody>);
 }
 
 const TodosRow = ({todoObj}) => {

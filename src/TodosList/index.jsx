@@ -32,7 +32,7 @@ const TodosList = ()  => {
     const sortOrder = ev.target.dataset.order;
     let [aValue, bValue] = [NaN, NaN];
 
-    [aValue,bValue] = 
+    [aValue, bValue] = 
       sortOrder === "ASC" ? [1, -1] : 
       sortOrder === "DESC" ? [-1, 1] : [NaN,NaN];
 
@@ -44,17 +44,13 @@ const TodosList = ()  => {
 
     <table>
       <thead>
-        <tr>
-          { todos.length > 0 && <TodosHeader headers={todoHeaders} onClickHandler={handleHeaderClick}/> }
-        </tr>
+        { todos.length > 0 && <TodosHeader headers={todoHeaders} onClickHandler={handleHeaderClick}/> }
       </thead>
-      <tbody>
-          { todos.length > 0 && <TodosBody todos={todos}/> }
-      </tbody>
+
+      { todos.length > 0 && <TodosBody todos={todos}/> }
     </table>
   </>);
 }
-
 
 const Loader = () => {
   return <div className="loader-container ">
